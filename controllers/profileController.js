@@ -201,6 +201,10 @@ const updateUsersProfile = async (req, res) => {
             id: _id
         });
 
+        user.date = new Date(user.date).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'medium' });
+        user.dateMod = new Date(user.dateMod).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'medium' });
+        user.privateDateMod = new Date(user.privateDateMod).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'medium' });
+
         user.password = msgPass;
         return res.status(201).json({
             ok: true,
@@ -304,6 +308,10 @@ const updateUsersPrivateProfile = async (req, res) => {
             command: ['profiles'],
             id: _id
         });
+
+        user.date = new Date(user.date).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'medium' });
+        user.dateMod = new Date(user.dateMod).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'medium' });
+        user.privateDateMod = new Date(user.privateDateMod).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'medium' });
 
         user.password = msgPass;
         return res.status(201).json({

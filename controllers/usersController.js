@@ -135,6 +135,9 @@ const getUserByEmail = async ({ params }, res) => {
                 msg: `El email ${params.email} no esta registrado en la bbdd.`,
             });
 
+        user.date = new Date(user.date).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'medium' });
+        user.dateMod = new Date(user.dateMod).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'medium' });
+        user.privateDateMod = new Date(user.privateDateMod).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'medium' });
 
         user.password = msgPass;
         return res.status(200).json({
@@ -209,6 +212,10 @@ const createUser = async (req, res) => {
         });
 
         user.password = msgPass;
+        user.date = new Date(user.date).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'medium' });
+        user.dateMod = new Date(user.dateMod).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'medium' });
+        user.privateDateMod = new Date(user.privateDateMod).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'medium' });
+
         return res.status(201).json({
             ok: true,
             msg: 'Usuario creado con éxito',
@@ -275,6 +282,10 @@ const updateUser = async (req, res) => {
             id: _id
         });
 
+        user.date = new Date(user.date).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'medium' });
+        user.dateMod = new Date(user.dateMod).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'medium' });
+        user.privateDateMod = new Date(user.privateDateMod).toLocaleString('es-ES', { dateStyle: 'long', timeStyle: 'medium' });
+        
         user.password = msgPass;
         return res.status(200).json({
             ok: true,
