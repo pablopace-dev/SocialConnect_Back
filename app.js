@@ -34,6 +34,16 @@ app.use('/api/users', require('./routers/routerUsers'));    //Users
 app.use('/api/public', require('./routers/routerPublic'));    //Profiles
 app.use('/api/socket', require('./routers/routerSocket'));    //Execute socket commands
 
+//Awake
+app.use('/wakeup', (req, res) => {
+
+    res.status(200).json({
+        ok: true,
+        msg: `I'm awake (Social Connect - Back)`
+    });
+
+});
+
 
 //Chat server controller
 const { socketController } = require('./controllers/socketController');
