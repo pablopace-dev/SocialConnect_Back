@@ -36,6 +36,8 @@ app.use('/api/socket', require('./routers/routerSocket'));    //Execute socket c
 
 //Awake
 app.use('/wakeup', (req, res) => {
+    
+    console.log("I'm awake (Social Connect - Back)");
 
     res.status(200).json({
         ok: true,
@@ -55,6 +57,4 @@ app.use((req, res) => { res.status(404).send({ msg: `Ruta no encontrada: ${req.u
 
 
 //Listener
-// app.listen(port, () => console.log(`AppServer listenning on port ${port}...`));
-
 server.listen(port, () => console.log(`Server listenning on port ${port}...`));
