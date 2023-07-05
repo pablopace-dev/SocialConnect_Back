@@ -18,7 +18,7 @@ Este es un servidor creado con NodeJS y Express, y gestiona el tráfico de infor
 
 ---
 ## Iniciar el Servidor:
-Se debe ejecutar el comando **npm run dev**, y sino se puede probar desde la web de [Render](https://social-back-qqn5.onrender.com), en ambos casos utilizando **Postman**.
+Se debe ejecutar el comando **npm install** para instalar las dependencias y luego **npm run dev**.
 
 ---
 ## EndPoints:
@@ -28,7 +28,7 @@ Cuenta con 3 rutas para los diferentes endpoints:
 * Usuario: engloba la mayoría de operaciones, gestiona todos los datos del usario, así también como los chats, invitaciones, amigos, etc... **/api/users/**
 * Socket: gestiona las onexiones directas con los clientes, principalmente para el chat, pero también para enviar algunas órdenes específicas, como por ejemplo: recargar los perfiles, o las invitaciones, o los amigos de un usuario, etc... **/api/socket**
 
-*Todas las especificaciones de la API se pueden consultar en la web de [GitHub](https://pablo2637.github.io/Social_Back/)
+*Todas las especificaciones de la API se pueden consultar en la [aquí](https://pablopace-dev.github.io/SocialConnect_Back/).
 
 ---
 ## Base de Datos:
